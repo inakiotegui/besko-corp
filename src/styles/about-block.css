@@ -1,0 +1,150 @@
+.about {
+  position: relative;
+  height: 70vh;
+  min-height: 420px;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.about__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
+  z-index: 0;
+}
+
+.about__inner {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 6vw;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.about__logo-wrap {
+  display: flex;
+  align-items: left;
+  justify-content: flex-start;
+  width: 260px;
+  justify-self: start;
+}
+
+.about__logo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about__content {
+  color: #fff;
+  max-width: 640px;
+}
+.about__text {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #fff;
+  white-space: pre-line;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .about {
+    overflow: hidden;
+  }
+  .about__bg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    will-change: transform;
+  }
+  .about__inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about__logo-wrap {
+    justify-self: center;
+  }
+
+  .about__content {
+    max-width: 90vw;
+  }
+
+  .about__text {
+    text-align: center;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 920px) {
+  .about {
+    overflow: hidden;
+  }
+  .about__bg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    will-change: transform;
+  }
+  .about__logo-wrap {
+    width: 230px;
+  }
+  .about__content { max-width: 700px; }
+  .about__text {
+    text-align: right;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 921px) and (max-width: 1024px) {
+  .about {
+    overflow: hidden;
+  }
+  .about__bg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    will-change: transform;
+  }
+  .about__logo-wrap {
+    width: 260px;
+  }
+  .about__content { max-width: 800px; }
+  .about__text {
+    text-align: right;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1480px) {
+  .about__bg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    will-change: transform;
+  }
+}

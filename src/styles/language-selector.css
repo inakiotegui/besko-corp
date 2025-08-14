@@ -1,0 +1,53 @@
+.lang {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.lang__btn {
+  font: 500 15px/1 "Roboto", sans-serif;
+  background: #058344;
+  color: #fff;
+  border: 0;
+  border-radius: 30px;
+  padding: .9rem 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+}
+.lang__btn:focus,
+.lang__btn:focus-visible,
+.lang__btn:active {
+  outline: none;
+  box-shadow: none;
+}
+.lang__caret { font-size: 20px; }
+
+.lang__menu {
+  position: absolute;
+  left: 0;
+  background: #078f4a;
+  padding: 0;
+  z-index: 1000;
+}
+
+.lang__option {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  padding: .95rem 1.2rem;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+.lang__option:hover,
+.lang__option:focus {
+  background: rgb(81, 177, 181);
+  outline: none;
+}
+
+[dir="rtl"] .lang__menu { left: auto; right: 0; }

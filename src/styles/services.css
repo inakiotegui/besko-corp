@@ -1,0 +1,167 @@
+.services {
+  background: rgb(219, 212, 212);
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.services__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services__title {
+  margin: 0 0 40px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: #058344;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.services__item {
+  text-align: center;
+  color: #726C6C;
+  font-family: "Roboto", sans-serif;
+}
+
+.services__icon-wrap {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 16px;
+  border: 3px solid #058344;
+  border-radius: 9999px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+}
+
+.services__icon {
+  font-size: 28px;
+  color: #058344;
+}
+
+.services__item-title {
+  margin: 8px 0 20px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #726C6C;
+}
+
+.services__item-sub {
+  margin: 0 auto;
+  max-width: 260px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #726C6C;
+}
+
+@media (max-width: 600px) {
+  .services {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .services__title {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  .services__item-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .services__item-sub {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 920px) {
+  .services {
+    height: auto;
+    padding: 50px 30px;
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .services__icon-wrap {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 14px;
+  }
+
+  .services__icon {
+    font-size: 26px;
+  }
+
+  .services__title {
+    font-size: 27px;
+    margin-bottom: 35px;
+  }
+
+  .services__item-title {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .services__item-sub {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 921px) and (max-width: 1024px) {
+  .services {
+    height: auto;
+    padding: 60px 40px;
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+  }
+
+  .services__icon-wrap {
+    width: 76px;
+    height: 76px;
+  }
+
+  .services__icon {
+    font-size: 30px;
+  }
+
+  .services__title {
+    font-size: 30px;
+    margin-bottom: 38px;
+  }
+
+  .services__item-title {
+    font-size: 19px;
+    margin-bottom: 18px;
+  }
+
+  .services__item-sub {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
