@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-//import Footer from './components/Footer';
-// import WhatsappButton from './components/WhatsappButton';
-// import ScrollToTop from './components/ScrollToTop';
+import Footer from './components/Footer';
+import DevBar from './components/DevBar';
+import ScrollToTop from './components/ScrollToTop';
 
 import Landing from './sections/index';
 
@@ -15,7 +15,6 @@ export default function App() {
   useEffect(() => {
     const el = document.documentElement;
     el.lang = language;
-    el.dir = language === 'ar' ? 'rtl' : 'ltr';
   }, [language]);
 
   return (
@@ -24,9 +23,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
       </Routes>
-      {/* <Footer /> */}
-      {/* <WhatsappButton /> */}
-      {/* <ScrollToTop /> */}
+      <Footer />
+      <DevBar />
+      <ScrollToTop />
     </div>
   );
 }

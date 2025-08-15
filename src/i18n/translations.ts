@@ -1,6 +1,15 @@
-// src/i18n/translations.ts
 export const translations = {
   en: {
+    nav: {
+      about: 'About us',
+      services: 'Services',
+      contact: 'Contact',
+      openMenu: 'Open menu',
+      closeMenu: 'Close menu',
+    },
+    hero: {
+      title: 'We turn opportunities into global connections.',
+    },
     aboutA: `We are an international company dedicated to connecting markets worldwide, facilitating the export and import of a diverse range of products.
 
 With a professional approach, we tailor each process to maximize results, ensuring your products reach the destinations where you envision success.
@@ -46,9 +55,24 @@ Our mission is to build strong, lasting business relationships that benefit both
       success: 'Message sent successfully.',
       error: 'There was a problem sending your message.',
     },
+    devbar: {
+      by: 'Developed by',
+    },
   },
 
   es: {
+    nav: {
+      about: 'Nosotros',
+      services: 'Servicios',
+      contact: 'Contacto',
+      openMenu: 'Abrir menú',
+      closeMenu: 'Cerrar menú',
+    },
+    hero: {
+      title: 'Transformamos oportunidades en conexiones globales.',
+      btn1: "Servicios",
+      btn2: "Contacto",
+    },
     aboutA: `Somos una empresa internacional dedicada a conectar mercados en todo el mundo, facilitando la exportación e importación de una amplia gama de productos.
 
 Con un enfoque profesional, adaptamos cada proceso para maximizar los resultados, asegurando que sus productos lleguen a los destinos donde imagina el éxito.
@@ -94,9 +118,22 @@ Nuestra misión es construir relaciones comerciales sólidas y duraderas que ben
       success: 'Mensaje enviado con éxito.',
       error: 'Hubo un problema al enviar el mensaje.',
     },
+    devbar: {
+      by: 'Desarrollado por',
+    },
   },
 
   ar: {
+    nav: {
+      about: 'من-نحن',
+      services: 'خدماتنا',
+      contact: 'اتصل',
+      openMenu: 'Open menu',
+      closeMenu: 'Close menu'
+    },
+    hero: {
+      title: 'نحوّل الفرص إلى روابط عالمية.',
+    },
     aboutA: `نحن شركة دولية مكرسة لربط الأسواق في جميع أنحاء العالم، وتسهيل تصدير واستيراد مجموعة متنوعة من المنتجات.
 
 بنهج احترافي، نخصص كل عملية لتحقيق أقصى قدر من النتائج، مما يضمن وصول منتجاتك إلى الوجهات التي تتصور النجاح فيها.
@@ -141,6 +178,9 @@ Nuestra misión es construir relaciones comerciales sólidas y duraderas que ben
       sending: 'جارٍ الإرسال…',
       success: 'تم إرسال الرسالة بنجاح.',
       error: 'حدثت مشكلة أثناء إرسال الرسالة.',
+    },
+    devbar: {
+      by: 'تم تطويره بواسطة',
     },
   },
 } as const;

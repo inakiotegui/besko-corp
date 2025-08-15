@@ -49,5 +49,3 @@
   background: rgb(81, 177, 181);
   outline: none;
 }
-
-[dir="rtl"] .lang__menu { left: auto; right: 0; }
