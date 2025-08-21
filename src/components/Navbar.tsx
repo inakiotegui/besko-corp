@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback, useRef } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import LanguageSelector from './LanguageSelector';
 import '../styles/navbar.css';
 import logo from '../assets/logos/logo-blanco.svg';
@@ -28,8 +28,6 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
-
-  const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
