@@ -32,7 +32,7 @@
 
 .contact__lead {
   margin: 0 0 20px;
-  color: #726C6C;
+  color: #726c6c;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.7;
@@ -64,7 +64,9 @@
 }
 
 .contact__input::placeholder,
-.contact__textarea::placeholder { color: #9a9a9a; }
+.contact__textarea::placeholder {
+  color: #9a9a9a;
+}
 
 .contact__textarea {
   resize: vertical;
@@ -83,9 +85,11 @@
   font-size: 15px;
   padding: 14px 16px;
   cursor: pointer;
-  transition: background-color .2s ease;
+  transition: background-color 0.2s ease;
 }
-.contact__submit:hover { background: rgb(81, 177, 181); }
+.contact__submit:hover {
+  background: rgb(81, 177, 181);
+}
 
 .contact__social {
   display: flex;
@@ -93,20 +97,20 @@
   margin-top: 18px;
 }
 .contact__social-btn {
-  width: 36px; height: 36px;
-  display: grid; place-items: center;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
   border-radius: 999px;
   background: #7a7272;
   color: #fff;
   text-decoration: none;
   font-size: 16px;
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   will-change: transform, background-color;
 }
 .contact__social-btn:hover {
-  transform: scale(.9);
+  transform: scale(0.9);
   background-color: #058344;
 }
 
@@ -127,6 +131,17 @@
   object-position: right center;
   user-select: none;
   pointer-events: none;
+}
+
+.contact-anim-left {
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.contact-anim-left--show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 @media (max-width: 600px) {
@@ -188,6 +203,17 @@
   .contact__social {
     justify-content: center;
     margin: 40px 0 25px;
+  }
+
+  .contact-anim-left {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .contact-anim-left--show {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

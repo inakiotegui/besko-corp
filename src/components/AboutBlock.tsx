@@ -10,6 +10,8 @@ type Props = {
 
 export default function AboutBlock({ bgSrc, text, sectionId }: Props) {
   const rootRef = useRef<HTMLDivElement>(null);
+  const logoRef = useRef<HTMLImageElement>(null);
+  const textRef = useRef<HTMLParagraphElement>(null);
   const [y, setY] = useState(0);
 
   useEffect(() => {
@@ -38,6 +40,27 @@ export default function AboutBlock({ bgSrc, text, sectionId }: Props) {
     };
   }, []);
 
+  useEffect(() => {
+    const options = { threshold: 0.6};
+
+    const callback: IntersectionObserverCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    if (logoRef.current) observer.observe(logoRef.current);
+    if (textRef.current) observer.observe(textRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <section ref={rootRef} className="about" aria-label="About block" id={sectionId}>
       <img
@@ -50,11 +73,17 @@ export default function AboutBlock({ bgSrc, text, sectionId }: Props) {
 
       <div className="about__inner">
         <div className="about__logo-wrap">
-          <img src={logo} alt="" className="about__logo" aria-hidden="true" />
+          <img
+            ref={logoRef}
+            src={logo}
+            alt=""
+            className="about__logo slide-left"
+            aria-hidden="true"
+          />
         </div>
 
         <div className="about__content">
-          <p className="about__text">{text}</p>
+          <p ref={textRef} className="about__text slide-right">{text}</p>
         </div>
       </div>
     </section>

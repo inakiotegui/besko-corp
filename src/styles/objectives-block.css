@@ -59,6 +59,7 @@
   font-size: clamp(21px, 3.2vw, 27px);
   line-height: 1.1;
   color: #058344;
+  font-weight: 600;
 }
 
 .obj__subtitle {
@@ -67,6 +68,18 @@
   line-height: 1.7;
   color: #726C6C;
   max-width: 550px;
+  font-weight: 400;
+}
+
+.fade-up-obj {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-up-obj.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 600px) {
@@ -241,11 +254,11 @@
   }
 
   .obj__title {
-    font-size: 30px;
+    font-size: 27px;
   }
 
   .obj__subtitle {
     margin: 0;
-    font-size: 19px;
+    font-size: 17px;
   }
 }
