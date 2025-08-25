@@ -5,7 +5,7 @@ import "../styles/product-description.css";
 
 import img1A from "../assets/content/7.png";
 import img1B from "../assets/content/5.png";
-import img2A from "../assets/content/3.png";
+import img2A from "../assets/content/2.png";
 import img2B from "../assets/content/1.png";
 
 function renderSubtitleHTML(text: string) {
